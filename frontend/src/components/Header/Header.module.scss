@@ -1,0 +1,42 @@
+header{
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+
+    .titleArea{
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title{
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    }
+
+    .menuArea{
+        height: 7vh;
+        
+        .list{
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            li{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &:not(:last-child){
+                    border-right-width: 0.1rem;
+                    border-right-color: black;
+                    border-right-style: solid;
+                }
+            }
+        }
+        border-bottom-width: 0.1rem;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+    }
+}
+    
