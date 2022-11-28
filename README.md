@@ -22,4 +22,4 @@ ReactSPA    - Routes(react-router-dom)
 
 ## Route
 + Root domain: http://localhost:3000
-+ /products
++ /goalList
