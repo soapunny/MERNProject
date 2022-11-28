@@ -3,9 +3,11 @@ import React from "react";
 
 import styles from "./NewGoal.module.scss";
 
-const NewGoal = ({addGoalHandler}) => {
+const INIT_TEXT = '';
 
-    const [goal, setGoal] = React.useState('');
+const NewGoal = ({onAddGoal}) => {
+
+    const [goal, setGoal] = React.useState(INIT_TEXT);
 
     const changeTextHandler = (evt) => {
         evt.preventDefault();
@@ -14,13 +16,14 @@ const NewGoal = ({addGoalHandler}) => {
 
     const submitGoalHandler = (evt) => {
         evt.preventDefault();
-        addGoalHandler(goal);
+        onAddGoal(goal);
+        setGoal(value => INIT_TEXT);
     }
 
     return (
     <div className={styles.newGoalArea}>
         <form method="post" className={styles.newGoalForm}>
-            <input type="text" onChange={changeTextHandler} name='goal' value={goal} className={styles.newGoal}/>
+            <input type="text" onChange={changeTextHandler} name='goal' value={goal} placeholder="Type new goal" className={styles.newGoal}/>
             <input type="submit" value='Add' className={styles.submit} onClick={submitGoalHandler} />
         </form>
     </div>

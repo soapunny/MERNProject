@@ -5,14 +5,18 @@ import styles from "./Header.module.scss";
 
 const header = () => {
 
+    const goHomeHandler = () => {
+        window.location.href = "/";
+    }
+
     return (
     <header>
         <div className={styles.titleArea}>
-            <h1 className={styles.title}>MERN project</h1>
+            <h1 className={styles.title} onClick={goHomeHandler}>MERN project</h1>
         </div>
         <div className={styles.menuArea}>
             <ul className={styles.list}>
-                <li><a>menu1</a></li>
+                <li><a href='/goalList'>Goals</a></li>
                 <li><a>menu2</a></li>
                 <li><a>menu3</a></li>
                 <li><a>menu4</a></li>
