@@ -1,0 +1,11 @@
+.avatar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+    }
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+}

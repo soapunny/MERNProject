@@ -1,0 +1,27 @@
+@import '/src/shared/scss/mixins/mixins';
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #F2E2C6;
+
+    display: grid;
+
+    @include smartPhone(){
+        grid-template-columns: 25vw 75vw;
+    }
+    @include tablet(){
+        grid-template-columns: 40vw 60vw;
+        height: 10vh;
+    }
+    @include laptop(){
+        grid-template-columns: 30vw 70vw;
+        height: 10vh;
+    }
+    align-items: center;
+    
+}
+    

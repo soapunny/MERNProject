@@ -1,0 +1,56 @@
+@import '/src/shared/scss/mixins/mixins';
+
+.userItem{
+    padding-top: 1rem;
+    height: max-content;
+    .placeLink{
+        display: grid;
+        height: max-content;
+        @include smartPhone(){
+            grid-template-columns: 20vw 40vw;
+        }
+        @include tablet(){
+            grid-template-columns: 12vw 30vw;
+        }
+        @include laptop(){
+            grid-template-columns: 8vw 20vw;
+        }
+        background-color: #666666;
+        border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+        opacity: 1.0;
+
+        &:hover{
+            background-color: #F2E2C6;
+            transition: background-color 0.3s linear;
+            transition: color 0.3s linear;
+
+            .userInfo{
+                .userInfo__name{
+                    color: white;
+                }
+                .userInfo__places{
+                    color: black;
+                }
+            }
+        }
+    
+        .userInfo{
+            justify-self: left;
+            display: grid;
+            grid-template-rows: 60% 40%;
+            grid-template-columns: 1fr;
+            
+            .userInfo__name{
+                color: #F2E2C6;
+                align-self: center;
+                font-weight: 500;
+                font-size: x-large;
+            }
+            .userInfo__places{
+                color: white;
+                font-weight: bold;
+                font-size: large;
+            }
+        }
+    }
+}

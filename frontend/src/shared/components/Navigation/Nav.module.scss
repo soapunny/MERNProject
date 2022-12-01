@@ -1,0 +1,41 @@
+@import '/src/shared/scss/mixins/mixins';
+
+
+.mainNav__title{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+@include smartPhone(){
+    .mainNav__menuBtn{
+        width: 5rem;
+        height: 5rem;
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-right: 2rem;
+        cursor: pointer;
+        font-size: xx-large;
+    }
+    .mainNav__nav{
+        display: none;
+    }
+}
+@include tablet(){
+    .mainNav__menuBtn{
+        display: none;
+    }
+    .mainNav__nav{
+        font-size: x-large;
+    }
+}
+@include laptop(){
+    .mainNav__menuBtn{
+        display: none;
+    }
+    .mainNav__nav{
+        font-size: x-large;
+    }
+}

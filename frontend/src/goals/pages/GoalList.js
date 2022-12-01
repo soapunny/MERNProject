@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import styles from './GoalList.module.scss';
-import NewGoal from '../NewGoal/NewGoal';
+import NewGoal from '../components/NewGoal';
 
 let idxCounter = 2;
 const INIT_GOALS = [
@@ -60,8 +60,8 @@ const GoalList = () => {
 
     return (
     <main>
-        <div className={styles.titleArea}>
-            <h1 className={styles.title}>Goal List Page</h1>
+        <div>
+            <h1>Goal List Page</h1>
         </div>
         <NewGoal onAddGoal={addGoalHandler}/>
         <div className={styles.listArea}>

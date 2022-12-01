@@ -1,0 +1,30 @@
+.placeList{
+    width: 45vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.noPlace{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .noPlace__title{
+        font-size: large;
+        margin-bottom: 1rem;
+    }
+    .noPlace__newBtn{
+        font-weight: bold;
+        background: transparent;
+        background-color: #F2E2C6;
+        border: none;
+        outline: none;
+
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+}

@@ -1,23 +1,15 @@
 main {
-  padding-top: 10vh;
+  padding-top: 5vh;
   margin-top: 5rem;
   
   display:flex;
   flex-direction: column;
   align-items: center;
   
-}
-
-a{
-  color: inherit;
-  opacity: 0.7;
-  text-decoration: none;
-  &:visited{
-    color: inherit;
-  }
-  &:hover{
-    opacity: 1.0;
-    cursor: pointer;
-    transition: opacity 0.3s linear;
+  div{//- for title
+    h1{
+      font-size: x-large;
+      font-weight: bold;
+    }
   }
 }

@@ -1,0 +1,72 @@
+.placeItem{
+    margin-bottom: 2rem;
+    width: 100%;
+    height: max-content;
+
+    div{
+        width: inherit;
+        height: inherit;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .placeItem__image{
+            border-radius: 0.3rem 0.3rem 0.3rem 0.3rem ;
+            width: 40vh;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                border-radius: 0.3rem 0.3rem 0.3rem 0.3rem ;
+                width: 40vh;
+                height: 30vh;
+                image-rendering: pixelated;
+                background-size: cover;
+
+            }
+            background-color: white;
+            margin-top: 2rem;
+        }
+        .placeItem__info{
+            width: 40vh;
+            height: 16vh;
+            display: flex;
+            flex-direction: column;
+            .placeItem__title{
+                height: 3vh;
+                font-weight: bold;
+            }
+            .placeItem__address{
+                height: 2vh;
+                padding-top: 0.5rem;
+                font-size: small;
+                text-decoration: underline;
+            }
+            .placeItem__description{
+                height: 10vh;
+                margin-top: 1rem;
+                font-size: small;
+                color: white;
+                opacity: 0.7;
+                overflow-y: auto;
+                scrollbar-width: 1px;
+            }
+            margin-top: 0.5rem;
+        }
+        .placeItem__actions{
+            width: 40vh;
+            height: 5vh;
+            display :flex;
+            flex-direction: row;
+            justify-content: center;
+            button{
+                margin-right: 1rem;
+                font-size: x-small;
+            }
+            margin-bottom: 0.5rem;
+        }
+    }
+}
