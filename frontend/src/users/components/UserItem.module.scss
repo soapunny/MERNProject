@@ -1,4 +1,5 @@
-@import '/src/shared/scss/mixins/mixins';
+@import '../../shared/scss/mixins/mixins';
+@import '../../shared/scss/config/variables';
 
 .userItem{
     padding-top: 1rem;
@@ -15,7 +16,8 @@
         @include laptop(){
             grid-template-columns: 8vw 20vw;
         }
-        background-color: #666666;
+        background-color: $dark_grey;
+        text-decoration: none;
         border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
         opacity: 1.0;
 
