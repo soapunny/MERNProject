@@ -13,7 +13,7 @@ const PlaceList = props => {
                 <Title size='default'>No Place Found. Can you share one?</Title>
             </div>
             <div className={styles.noPlace__button}>
-                <Button size='default' fit='true' space='true' to='#'>Share place</Button>
+                <Button size='default' fit='true' to='#'>Share place</Button>
             </div>
         </div>
         );
