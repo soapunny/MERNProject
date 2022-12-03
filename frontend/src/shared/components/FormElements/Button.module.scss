@@ -1,0 +1,65 @@
+@import "../../scss/config/variables";
+
+.button{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+    outline: none;
+    font: inherit;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    background-color: white;
+    color: $dark_grey;
+    text-decoration: none;
+    display: inline-block;
+
+    &:visited{
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: white;
+        cursor: pointer;
+        background-color: $light_ivory;
+        transition: background-color 0.3s linear;
+        transition: color 0.3s linear;
+    }
+}
+
+
+.button__small{
+    font-size: small;
+    padding: 0.2rem;
+}
+
+.button__default{
+    font-size: medium;
+    padding: 0.5rem;
+}
+
+.button__large{
+    font-size: large;
+    padding: 0.8rem;
+}
+
+.button__inverse{
+    font-size: small;
+}
+
+.button__danger{
+    font-size: small;
+}
+
+.button__fit{
+    width: 100%;
+    height: 100%;
+}
+
+.button__space{
+    margin-right: 1rem;
+}
+
+
+

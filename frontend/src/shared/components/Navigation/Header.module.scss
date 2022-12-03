@@ -11,7 +11,7 @@ header{
     display: grid;
 
     @include smartPhone(){
-        grid-template-columns: 25vw 75vw;
+        grid-template-columns: 10vw 90vw;
     }
     @include tablet(){
         grid-template-columns: 40vw 60vw;

@@ -1,32 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Title from "../FormElements/Title";
 
 import styles from "./NavLinks.module.scss";
 
 const NavLinks = ({userId}) => {
 
-    const clickNavLinkHandler = (evt) => {
-        const Links = document.querySelectorAll('#navList li a');
-        Links.forEach(link => {
-            console.log(link);
-            link.classList.remove(styles.active);
-        });
-        evt.target.classList.add(styles.active);
-    }
-
     return (
     <ul className={styles.navList} id='navList'>
         <li>
-            <Link onClick={clickNavLinkHandler} to="/users" exact='true'>Users</Link>
+            <Title size='small' to="/users" exact='true'>Users</Title>
         </li>
         <li>
-            <Link onClick={clickNavLinkHandler} to={`/users/${userId}/places`}>My Places</Link>
+            <Title size='small' to={`/users/${userId}/places`}>My Places</Title>
         </li>
         <li>
-            <Link onClick={clickNavLinkHandler} to="/places/new">Add Places</Link>
+            <Title size='small' to="/places/new">Add Places</Title>
         </li>
         <li>
-            <Link onClick={clickNavLinkHandler} to="/auth">Login</Link>
+            <Title size='small' to="/auth">Login</Title>
         </li>
     </ul>
     );

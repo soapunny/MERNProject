@@ -1,3 +1,5 @@
+@import '../../shared/scss/config/variables';
+
 .placeList{
     width: 45vh;
     height: auto;
@@ -14,17 +16,15 @@
     justify-content: center;
 
     .noPlace__title{
-        font-size: large;
         margin-bottom: 1rem;
     }
-    .noPlace__newBtn{
-        font-weight: bold;
-        background: transparent;
-        background-color: #F2E2C6;
-        border: none;
-        outline: none;
+    .noPlace__button{
+        display: flex;
 
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
+        border-color: $light_ivory;
+        border-width: 0.1rem;
+        border-radius: 0.3rem;
+        border-style: solid;
+        outline: none;
     }
 }

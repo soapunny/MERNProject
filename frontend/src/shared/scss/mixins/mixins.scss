@@ -1,24 +1,24 @@
 $minSmartPhoneWidth : 0px;
-$maxSmartPhoneWidth : 499px;
-$minTabletWidth : 500px;
+$maxSmartPhoneWidth : 549px;
+$minTabletWidth : 550px;
 $maxTabletWidth : 999px;
 $minLaptopWidth : 1000px;
 
 
 @mixin smartPhone(){
-    @media screen and (min-width: $minSmartPhoneWidth) and (max-width: $maxSmartPhoneWidth) {
+    @media screen and (min-width: $minSmartPhoneWidth) and (max-width: $maxSmartPhoneWidth) and (orientation: portrait) {
         @content;
     }
 };
 
 @mixin tablet(){
-    @media screen and (min-width: $minTabletWidth) and (max-width: $maxTabletWidth) {
+    @media screen and (min-width: $minTabletWidth) and (max-width: $maxTabletWidth) and (orientation: portrait) {
         @content;
     }
 };
 
 @mixin laptop(){
-    @media screen and (min-width: $minLaptopWidth) {
+    @media screen and (min-width: $minLaptopWidth) and (orientation: landscape) {
         @content;
     }
 };

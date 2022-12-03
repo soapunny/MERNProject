@@ -1,8 +1,10 @@
 import React from "react";
+import Title from "../../shared/components/FormElements/Title";
 import UserList from "../components/UserList";
 
 import styles from "./Users.module.scss";
 
+const TITLE = 'Users Page';
 let idIdx = 2;
 
 const INIT_USER_LIST = [
@@ -10,13 +12,13 @@ const INIT_USER_LIST = [
         id: '0',
         image: '/images/soap.jpg',
         name: 'Soap So',
-        places: 3,
+        places: 2,
     },
     {
         id: '1',
         image: '/images/angel.jpg',
         name: 'Angel So',
-        places: 1,
+        places: 0,
     }
 ];
 
@@ -33,7 +35,9 @@ const Users = () => {
     return(
     <main>
         <div>
-            <h1>Users Pages</h1>
+            <Title size='default'>
+                {TITLE}
+            </Title>
         </div>
         <div>
             <UserList users={users} />

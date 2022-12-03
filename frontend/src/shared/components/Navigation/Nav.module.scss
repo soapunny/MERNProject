@@ -1,10 +1,6 @@
 @import '/src/shared/scss/mixins/mixins';
 
 
-.mainNav__title{
-    font-weight: bold;
-    font-size: xx-large;
-}
 
 @include smartPhone(){
     .mainNav__menuBtn{

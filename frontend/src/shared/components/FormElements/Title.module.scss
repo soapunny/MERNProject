@@ -1,0 +1,55 @@
+@import "../../scss/config/variables";
+
+.title{
+    justify-self: center;
+    width: max-content;
+    height: max-content;
+    border-radius: 0.3rem;
+    color: $dark_grey;
+    background-color: white;
+    font-weight: bold;
+
+    .link{
+        border-radius: 0.3rem;
+        color: inherit;
+        font: inherit;
+        text-decoration: none;
+
+        &:visited{
+            text-decoration: none;
+        }
+    }
+
+}
+
+.title__anchor{
+    &:hover{
+        cursor: pointer;
+        color: $light_ivory;
+        background-color: $dark_grey;
+        transition: background-color 0.3s linear;
+    }
+}
+
+.title__small{
+    font-size: medium;
+    padding: 0.2rem;
+}
+
+.title__default{
+    font-size: large;
+    padding: 0.3rem;
+}
+
+.title__large{
+    font-size: xx-large;
+    padding: 0.5rem;
+}
+
+.title__inverse{
+    font-size: small;
+}
+
+.title__danger{
+    font-size: small;
+}

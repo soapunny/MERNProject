@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "../../shared/components/FormElements/Button";
+import Title from "../../shared/components/FormElements/Title";
 import PlaceItem from "./PlaceItem";
 
 import styles from "./PlaceList.module.scss"
@@ -7,8 +9,12 @@ const PlaceList = props => {
     if(!props.places || props.places.length === 0){
         return (
         <div className={styles.noPlace}>
-            <h2 className={styles.noPlace__title}>No Place Found. Can you share one?</h2>
-            <button className={styles.noPlace__newBtn}>Share place</button>
+            <div className={styles.noPlace__title}>
+                <Title size='default'>No Place Found. Can you share one?</Title>
+            </div>
+            <div className={styles.noPlace__button}>
+                <Button size='default' fit='true' space='true' to='#'>Share place</Button>
+            </div>
         </div>
         );
     }

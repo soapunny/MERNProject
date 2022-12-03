@@ -1,24 +1,10 @@
+@import '../../scss/config/variables';
+
 .navList{
     width: 100%;
     display: flex;
     justify-content: space-around;
     font-size: medium;
     font-weight: bold;
-    li{
-        color: black;
-        .active{
-            opacity: 1.0;
-            border-bottom-color: #FFF77F;
-            border-bottom-width: 0.2rem;
-            border-bottom-style: solid;
-            color: white;
-        }
-        &:hover{
-            opacity: 1.0;
-            border-bottom-color: #FFF77F;
-            border-bottom-width: 0.2rem;
-            border-bottom-style: solid;
-            color: white;
-        }
-    }
+    
 }

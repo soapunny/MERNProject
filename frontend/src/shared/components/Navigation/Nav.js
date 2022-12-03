@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Title from "../FormElements/Title";
 import Backdrop from "../UIElements/Backdrop";
 import Header from "./Header";
 
@@ -33,9 +34,9 @@ const Nav = () => {
             <button onClick={openDrawerHandler} className={styles.mainNav__menuBtn}>
                 <i className="fa fa-bars"></i>
             </button>
-            <h1 className={styles.mainNav__title}>
-                <Link to='/'>MERN Project</Link>
-            </h1>
+            <Title to='/' size='large'>
+                MERN Project
+            </Title>
             <nav className={styles.mainNav__nav}>
                 <NavLinks userId='1'/>
             </nav>

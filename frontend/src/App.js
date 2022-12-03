@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, createBrowserRouter, Navigate, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, Navigate, RouterProvider} from 'react-router-dom';
 
 import './App.module.scss';
 import GoalList from './goals/pages/GoalList';
