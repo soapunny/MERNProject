@@ -12,6 +12,13 @@ import UserPlaces from './places/pages/UserPlaces';
 
 function App() {
 
+  React.useEffect(() => {
+      const googleMapApiScript = window.document.createElement('script');
+      googleMapApiScript.src = `https://maps.googleapis.com/maps/api/js?key=${window.env.GOOGLE_KEY}&libraries=geometry,places`;
+      googleMapApiScript.async = true;
+      window.document.body.appendChild(googleMapApiScript);
+  }, []);
+
   const getAlignedJSX = (element) => {
     return (
     <React.Fragment>
@@ -58,7 +65,11 @@ function App() {
     }
   ]);
 
-  return <RouterProvider router={router}/>;
+  return (
+    <React.Fragment>
+      <RouterProvider router={router}/>
+    </React.Fragment>
+  );
 }
 
 export default App;
