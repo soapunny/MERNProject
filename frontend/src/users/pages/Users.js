@@ -9,13 +9,13 @@ let idIdx = 2;
 
 const INIT_USER_LIST = [
     {
-        id: '0',
+        id: 'u0',
         image: '/images/soap.jpg',
         name: 'Soap So',
         places: 2,
     },
     {
-        id: '1',
+        id: 'u1',
         image: '/images/angel.jpg',
         name: 'Angel So',
         places: 0,

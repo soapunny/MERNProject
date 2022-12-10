@@ -1,6 +1,9 @@
 @import "../../scss/config/variables";
 
 .card{
+    width: inherit;
+    height: inherit;
+
     background-color: $dark_grey;
     border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
     opacity: 1.0;

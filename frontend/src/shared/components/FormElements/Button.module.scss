@@ -14,6 +14,11 @@
     color: $dark_grey;
     text-decoration: none;
     display: inline-block;
+    white-space:nowrap; 
+    overflow:hidden;
+    text-overflow: ellipsis;// Applicable only if there are four above.
+
+
 
     &:visited{
         text-decoration: none;
@@ -45,11 +50,14 @@
 }
 
 .button__inverse{
-    font-size: small;
+    background-color: $dark_grey;
+    color: white;
 }
 
 .button__danger{
-    font-size: small;
+    &:hover{
+        background-color: red;
+    }
 }
 
 .button__fit{

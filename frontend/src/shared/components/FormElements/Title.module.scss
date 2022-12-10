@@ -1,7 +1,10 @@
 @import "../../scss/config/variables";
 
 .title{
+    align-self: center;
     justify-self: center;
+    text-align: center;
+
     width: max-content;
     height: max-content;
     border-radius: 0.3rem;
@@ -34,16 +37,22 @@
 .title__small{
     font-size: medium;
     padding: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .title__default{
     font-size: large;
     padding: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .title__large{
     font-size: xx-large;
     padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .title__inverse{
@@ -51,5 +60,11 @@
 }
 
 .title__danger{
-    font-size: small;
+    &:hover{
+        background-color: red;
+    }
+}
+
+.title__fit{
+    width: 100%;
 }

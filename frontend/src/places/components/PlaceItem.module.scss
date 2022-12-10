@@ -1,69 +1,97 @@
 @import "../../shared/scss/config/variables";
+@import '/src/shared/scss/mixins/mixins';
 
 .placeItem{
-    margin-bottom: 2rem;
-    width: 100%;
-    height: max-content;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10vh;
+    height: 80vh;
 
-    div{
-        width: inherit;
-        height: inherit;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-
-        .placeItem__image{
-            width: 40vh;
-            height: 40vh;
-            border-radius: 0.3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-            margin-top: 1rem;
-        }
-        .placeItem__info{
-            width: 40vh;
-            height: 16vh;
-            display: flex;
-            flex-direction: column;
-            .placeItem__address{
-                width: inherit;
-                height: 5vh;
-                white-space:nowrap; 
-                overflow:hidden;
-                text-overflow: ellipsis;// Applicable only if there are four above.
-                padding-top: 0.5rem;
-                font-size: small;
-                font-weight: bold;
-                color: white;
-            }
-            .placeItem__description{
-                width: inherit;
-                height: 11vh;
-                margin-top: 0.5rem;
-                border-radius: 0.3rem;
-                background-color: white;
-                padding-left: 0.5rem;
-                font-size: small;
-                font-weight: bold;
-                //text-shadow: 0 0 3px $dark_grey;
-                color: $dark_grey;
-                overflow-y: auto;
-            }
-            margin-top: 0.5rem;
-        }
-        .placeItem__actions{
-            width: 40vh;
-            height: 5vh;
-            display :flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
+    @include smartPhone(){
+        width: 90%;
     }
+    @include tablet(){
+        width: 60%;
+    }
+    @include laptop(){
+        width: 30%;
+    }
+}
+
+.placeItem__image{
+    @include smartPhone(){
+        height: 40vh;
+    }
+    @include tablet(){
+        height: 40vh;
+    }
+    @include laptop(){
+        height: 40vh;
+    }
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.placeItem__info{
+    display: flex;
+    flex-direction: column;
+    .placeItem__address{
+        margin-top:0;
+        margin-bottom:0;
+        width: inherit;
+        white-space:nowrap; 
+        overflow:hidden;
+        text-overflow: ellipsis;// Applicable only if there are four above.
+        text-indent: 1rem;
+        font-size: small;
+        font-weight: bold;
+        color: white;
+    }
+    .placeItem__description{
+        width: inherit;
+        height: 15vh;
+        border-radius: 0.3rem;
+        background-color: white;
+        padding-left: 0.5rem;
+        font-size: small;
+        font-weight: bold;
+        //text-shadow: 0 0 3px $dark_grey;
+        color: $dark_grey;
+        overflow-y: auto;
+    }
+}
+.placeItem__actions{
+    display :flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 60% 30% 10%;
+    grid-template-columns: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__header{
+    width: 100%;
+}
+
+.modal__content{
+
+}
+
+.modal__actions{
+    
+}
+
+.map{
+    height: 40vh;
+    width: 100%;
 }

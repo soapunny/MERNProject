@@ -9,17 +9,19 @@ header{
     background-color: #F2E2C6;
 
     display: grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-rows: max-content;
 
     @include smartPhone(){
         grid-template-columns: 10vw 90vw;
     }
     @include tablet(){
         grid-template-columns: 40vw 60vw;
-        height: 10vh;
     }
     @include laptop(){
         grid-template-columns: 30vw 70vw;
-        height: 10vh;
     }
     align-items: center;
     

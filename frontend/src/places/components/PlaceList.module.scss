@@ -1,11 +1,15 @@
 @import '../../shared/scss/config/variables';
+@import '/src/shared/scss/mixins/mixins';
 
 .placeList{
-    width: 45vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
     height: auto;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 

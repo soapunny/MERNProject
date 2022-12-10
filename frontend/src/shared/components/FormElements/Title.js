@@ -15,8 +15,14 @@ const Title = props => {
 
     if(props.to){
         return (
-            <h1 className={`${styles.title} ${styles.title__anchor} ${titleSizeClassName} ${props.inverse && styles.title__inverse} ${props.danger && styles.title__danger}`}
-            onClick={props.onClick}>
+            <h1 className={`
+                ${styles.title} 
+                ${styles.title__anchor} 
+                ${titleSizeClassName} 
+                ${props.inverse && styles.title__inverse} 
+                ${props.danger && styles.title__danger}
+                ${props.fit && styles.title__fit}`}
+                onClick={props.onClick}>
                 <Link to={props.to} className={styles.link}>
                     {props.children}
                 </Link>
@@ -24,7 +30,12 @@ const Title = props => {
         );
     }
     return (
-        <h1 className={`${styles.title} ${titleSizeClassName} ${props.inverse && styles.title__inverse} ${props.danger && styles.title__danger}`}
+        <h1 className={`
+            ${styles.title} 
+            ${titleSizeClassName} 
+            ${props.inverse && styles.title__inverse} 
+            ${props.danger && styles.title__danger}
+            ${props.fit && styles.title__fit}`}
             onClick={props.onClick}>
             {props.children}
         </h1>

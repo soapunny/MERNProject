@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Title from "../FormElements/Title";
 import Backdrop from "../UIElements/Backdrop";
 import Header from "./Header";
@@ -7,6 +6,8 @@ import Header from "./Header";
 import styles from "./Nav.module.scss"
 import NavLinks from "./NavLinks";
 import SideDrawer from "./SideDrawer";
+
+const USER_ID = 'u0';
 
 const Nav = () => {
     const INIT_DRAWER_STATE = false;
@@ -25,9 +26,11 @@ const Nav = () => {
     <React.Fragment>
         {drawerIsOpen && <Backdrop onClick={closeDrawerHandler}/>}
         <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}>
-            <nav id='sideNav'>
-                <div><h1>Menu</h1></div>
-                <NavLinks />
+            <nav id='sideNav' className={styles.nav__portrait}>
+                <div className={styles.title}>
+                    <Title fit='true' size='large'>Menu</Title>
+                </div>
+                <NavLinks userId={USER_ID}/>
             </nav>
         </SideDrawer>
         <Header>
@@ -37,8 +40,8 @@ const Nav = () => {
             <Title to='/' size='large'>
                 MERN Project
             </Title>
-            <nav className={styles.mainNav__nav}>
-                <NavLinks userId='1'/>
+            <nav className={styles.nav__landscape}>
+                <NavLinks orientation='landscape' userId={USER_ID}/>
             </nav>
         </Header>
     </React.Fragment>
