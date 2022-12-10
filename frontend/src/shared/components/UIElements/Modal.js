@@ -8,16 +8,16 @@ import styles from "./Modal.module.scss";
 const ModalOverlay = props => {
     const content = (
         <div className={`${styles.modal} ${props.className}`}>
-            <header className={`${styles.modal__header} ${props.headerClass}`}>
+            <div className={`${styles.modal__header} ${props.headerClass}`}>
                 <h2 className={styles.modal__header__title}>{props.header}</h2>
-            </header>
-            <form onSubmit={props.onSubmit ? props.onSubmit : event => event.preventDefault}>
+            </div>
+            <form className={styles.form} onSubmit={props.onSubmit ? props.onSubmit : event => event.preventDefault}>
                 <div className={`${styles.modal__content} ${props.contentClass}`}>
                     {props.children}
                 </div>
-                <footer className={`${styles.modal__footer} ${props.footerClass}`}>
+                <div className={`${styles.modal__footer} ${props.footerClass}`}>
                     {props.footer}
-                </footer>
+                </div>
             </form>
         </div>
     )

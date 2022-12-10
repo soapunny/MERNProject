@@ -7,6 +7,7 @@ import Title from "../../shared/components/FormElements/Title";
 import styles from "./PlaceItem.module.scss"
 
 import Modal from "../../shared/components/UIElements/Modal";
+import Map from "../../shared/components/UIElements/Map";
 
 const PlaceItem = props => {
     const INIT_SHOW_MAP = false;
@@ -31,11 +32,8 @@ const PlaceItem = props => {
         headerClass={styles.modal__header}
         contentClass={styles.modal__content}
         footerClass={styles.modal__actions}
-        footer={<Button onClick={closeMapHandler}>CLOSE</Button>}
-    >
-        <div className={styles.map}>
-            <h2># MAP</h2>
-        </div>
+        footer={<Button onClick={closeMapHandler}>CLOSE</Button>}>
+        <Map zoom={9} center={props.coordinates}/>
     </Modal>
     <li key={props.id} className={styles.placeItem}>
         <Card style={styles.card}>

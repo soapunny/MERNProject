@@ -33,10 +33,10 @@ const INIT_PLACES = [
         id: getPlaceId(),
         title: 'Home',
         description: 'One of the most coziest place in the world.',
-        image: '/images/home.jpg',
-        address: '33894 lawton ave, Eastlake, OH, USA 44095',
+        image: '/images/home-612x612.jpg',
+        address: 'Eastlake, OH, USA 44095',
         creator: 'u0',
-        location: getLocation(41.6604645, -81.4535408),
+        location: getLocation(41.6594465, -81.4312849),
     }
 ];
 
