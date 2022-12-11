@@ -353,4 +353,4 @@ MigrationBackup/
 node_modules/
 
 #env
-*.env
+tempEnv.js
