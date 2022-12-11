@@ -353,4 +353,5 @@ MigrationBackup/
 node_modules/
 
 #env
+secret/
 tempEnv.js
